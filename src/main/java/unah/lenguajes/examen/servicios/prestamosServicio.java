@@ -9,7 +9,7 @@ import unah.lenguajes.examen.repositorios.prestamosRespositorio;
 
 @Service
 public class prestamosServicio {
-    
+
     @Autowired
     private clienteRepositorio clienteRepositorio;
     @Autowired
