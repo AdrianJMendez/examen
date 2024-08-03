@@ -1,6 +1,9 @@
 package unah.lenguajes.examen.contraladores;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,5 +22,11 @@ public class clienteControlador {
     @PostMapping("/crear")
     public cliente crearNuevo(@RequestBody cliente Nvocliente) {
         return clienteServicio.crearCliente(Nvocliente);
+    }
+
+    @GetMapping("/obtener/todos")
+    public List<cliente> obtenerTodos() {
+
+        return this.clienteServicio.obtenerTodos();
     }
 }

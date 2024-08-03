@@ -38,4 +38,8 @@ public class clienteServicio {
         return null;
 
     }
+
+    public List<cliente> obtenerTodos() {
+        return this.clienteRepositorio.findAll();
+    }
 }
